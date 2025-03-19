@@ -64,6 +64,6 @@ def get_graph(nodes: List[str] = Query(...)) -> Dict:
                 G.add_edge(node1, node2, weight=weight)
 
     # Convert to edge list JSON format
-    edge_list = [{"source": u, "target": v, "weight": d["weight"]} for u, v, d in G.edges(data=True)]
+    edge_list = [{"source": u, "target": v, "weight": float(d["weight"])} for u, v, d in G.edges(data=True)]
     
     return {"nodes": available_nodes, "edges": edge_list}
