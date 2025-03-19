@@ -1,1 +1,1 @@
-# cugraph-docker
+# node2vec-embeddings
